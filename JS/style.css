@@ -1,0 +1,84 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: pink
+    
+  }
+  
+  header {
+    background-color:white;
+    margin: 0 auto;
+    height: 50px;
+  }
+  
+    header h2 {
+    padding: 10px;
+    margin: 0;
+    font-size: 35px;
+    
+    
+   
+  }
+
+  h1 {
+    padding: 10px;
+    margin: 0;
+    color: pink;
+   
+  }
+  
+  main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-gap: 20px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+  }
+  
+  div.card {
+    background-color: #eeeeee;
+    height: 250px;
+    width: 300px;
+    box-shadow: 10px 10px grey;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 30px;
+    text-align: center;
+  }
+  
+  p {
+    font-size: 15px;
+    color: black;
+    font-family: Helvetica;
+  }
+  
+  li {
+    font-size: 20px;
+    list-style: none;
+    padding-right: 20px;
+  }
+  
+  button {
+    font-size: 10px;
+    color: black;
+    background-color: white;
+    border-radius: 10px;
+  }
+  
+  /* button.release {
+    float: right;
+    background-color: #E1332D;
+  } */
+  
+  @media only screen and (min-width: 500px) {
+    main {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  @media only screen and (min-width: 850px) {
+    main {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
