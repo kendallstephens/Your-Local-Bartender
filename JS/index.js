@@ -20,7 +20,7 @@ function buildCategories(category){
 
     categoryCard.textContent = category.name
     recipeButton.dataset.categoryId = category.id
-    recipeButton.textContent = `Add a ${category.name} Recipe!`
+    recipeButton.textContent = `Add ${category.name} Recipe!`
 
     
     category.cocktail_recipes.map(cocktail_recipe => {
@@ -40,7 +40,7 @@ function buildCategories(category){
             fetch(`http://localhost:3000//cocktail_recipes/${cocktail_recipe.id}`, {
             method: 'DELETE'
         })
-            .then(response => response.json())
+            .then(res => res.json())
             .then(cocktail_recipe => {
             cocktailLi.remove()
             main.innerHTML = ''
@@ -68,15 +68,15 @@ function buildCategories(category){
     recipeButton.addEventListener('click', () =>  buildRecipeForm(category.id))
 
     function buildRecipeForm(value){
-        console.log(value)
         main.innerHTML = ''
         let formItems = ['name', 'image_url', 'ingredients', 'preperation', 'cocktail_name']
     
         let form = document.createElement('form')
         let h2 = document.createElement('h2')
         let submit = document.createElement('input')
-    
-        h2.textContent = 'Add a Cocktail Recipe'
+
+        h2.className = 'add'
+        h2.textContent = 'Add a Cocktail Recipe!'
         submit.type = 'submit'
     
         formItems.forEach(item => {
@@ -87,10 +87,10 @@ function buildCategories(category){
             input.type = 'text'
             input.name = item
     
-            form.append(label, input)
+            form.append(input, label)
     
         })
-
+        
         form.appendChild(submit)
         main.append(h2, form)
 
@@ -151,7 +151,7 @@ function buildCategories(category){
     <div id="selected_cocktail_recipe_info">
     <h2 id="cocktail_name">${cocktail_recipe.name}</h2>
     <div id= "inner_cocktail_info">
-        <img src="${cocktail_recipe.image_url}">
+        <img src="${cocktail_recipe.image_url}" size="50%">
         <h3>Ingredients:</h3>
         <p>${cocktail_recipe.ingredients}</p>
         <h3>Preparation:</h3>
@@ -165,16 +165,11 @@ function buildCategories(category){
      likeButton = document.querySelector('.like-button')
      likeButton.setAttribute('id', cocktail_recipe.id)
      likeButton.addEventListener('click', (e) => {
-         console.log(e)
           addLikes(e, cocktail_recipe)
      })
 
      function addLikes(e, cocktail_recipe) {
-        e.preventDefault()
-        console.log(cocktail_recipe.likes)
         let more = cocktail_recipe.likes++
-        console.log(more)
-        // cocktail_recipe ++
       
         fetch(`http://localhost:3000//cocktail_recipes/${cocktail_recipe.id}`, {
             method: "PATCH",
@@ -190,22 +185,11 @@ function buildCategories(category){
           .then((like_obj => {
             e.target.previousElementSibling.innerText = `${more}`;
           }))
+        }
+
       }
 
-    }
 
-    // function deleteCocktailRecipe(cocktail_recipe) {
-        
-        // fetch(`COCKTAIL_RECIPES_URL/${cocktail_recipe.id}`,{
-        //     method: 'DELETE'
-        // })
-        // .then(response => response.json())
-        // .then(cocktail_recipe => {
-        //   container.remove()
-        // })
-        // .catch((error) => {
-        //   console.error('Error:', error);
-        // });
        
 
     
@@ -223,39 +207,9 @@ function buildCategories(category){
 
 
 
-    //     form.addEventListener('submit', (e) => {
-    //         fetch(COCKTAIL_RECIPES_URL, {
-    //             method: 'POST', 
-    //             headers: {
-    //                 'Content-Type' : 'application/json',
-    //                 Accept: 'application/json'
-    //             },
-    //             body: JSON.stringify({
-    //                 'name': `${e.target.name.value}`,
-    //                 'image_url' : `${e.target.image_url.value}` ,
-    //                 'ingredients' : `${e.target.ingredients.value}`,
-    //                 'preperation' : `${e.target.preperation.value}`,
-    //             })
-
-    //         })
-    //         .then(res => res.json)
-    //         .then(console.log(e))
-
-    //     })
 
 
-    // buildCocktailRecipes()
 
-    // function fetchCocktailRecipes(){
-    //     fetch(COCKTAIL_RECIPES_URL)
-    //     .then(res => res.json()) 
-    //     .then(cocktail_recipes => cocktail_recipes.forEach(cocktail_recipe => {
-    //         console.log(cocktail_recipe.name)
-    //         console.log(cocktail_recipe.ingredients)
-    //         console.log(cocktail_recipe.preperation) 
-    //      }) )
-    // }
-    // fetchCocktailRecipes()
 
 
 

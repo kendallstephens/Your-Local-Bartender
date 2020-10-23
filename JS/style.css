@@ -1,30 +1,33 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: pink
+    background-color: black
     
   }
   
   header {
     background-color:white;
     margin: 0 auto;
-    height: 50px;
+    height: 50;
   }
   
     header h2 {
+    color: black;
+    font-weight: 300;
     padding: 10px;
     margin: 0;
     font-size: 35px;
-    
-    
-   
+    text-align: center;
+  }
+  
+  #cocktail_name{
+    color: white
   }
 
-  h1 {
-    padding: 10px;
-    margin: 0;
-    color: pink;
-   
+  h3 {
+    font-family: futura-pt;
+    color: white;
+    font-weight: 300;
   }
   
   main {
@@ -34,27 +37,32 @@ body {
     grid-gap: 20px;
     padding-top: 10px;
     padding-bottom: 30px;
+    
   }
   
   div.card {
     background-color: #eeeeee;
     height: 250px;
     width: 300px;
-    box-shadow: 10px 10px grey;
+    box-shadow: 10px 10px#FF5050;
     padding: 10px;
     border-radius: 10px;
+    /* font-family: futura-pt; */
+    font-weight: 300;
     font-size: 30px;
     text-align: center;
   }
   
   p {
     font-size: 15px;
-    color: black;
-    font-family: Helvetica;
+    color: white;
+    /* font-family: futura-pt; */
+    font-weight: 300;
   }
   
   li {
-    font-size: 20px;
+    font-size: 16px;
+    color: black;
     list-style: none;
     padding-right: 20px;
   }
@@ -65,20 +73,34 @@ body {
     background-color: white;
     border-radius: 10px;
   }
+
+  img {
+    max-width: 200%;
+ 
+}
+
+.add{
+  color: white;
+
+}
+
+.Logo{
+  display: block;
+    margin-left: auto;
+    margin-right: auto 
+}
+
+form{
+  font-size: 21px;
+}
   
-  /* button.release {
-    float: right;
-    background-color: #E1332D;
-  } */
+ label {
+   color: white;
+   
+ }
   
-  @media only screen and (min-width: 500px) {
+    @media only screen and (min-width: 850px) {
     main {
-      grid-template-columns: 1fr 1fr;
-    }
-  }
-  
-  @media only screen and (min-width: 850px) {
-    main {
-      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
     }
   }
