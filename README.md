@@ -14,7 +14,7 @@ A cocktail recipe sharing app where users can add their favorite recipes, view a
 ### Server
 * Ruby on Rails 
 
-### Setup
+## Setup
 
 After forking and cloning this repo, run the following commands in your terminal
 
@@ -25,6 +25,6 @@ After forking and cloning this repo, run the following commands in your terminal
 
 Next, navigate to the JS folder and open the index.html file in your browser
 
-### License
+## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
