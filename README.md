@@ -12,7 +12,7 @@ A cocktail recipe sharing app where users can add their favorite recipes, view a
 
 
 ### Server
-* Ruby ob Rails 
+* Ruby on Rails 
 
 ### Setup
 
