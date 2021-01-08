@@ -69,7 +69,7 @@ function buildCategories(category){
 
     function buildRecipeForm(value){
         main.innerHTML = ''
-        let formItems = ['name', 'image_url', 'ingredients', 'preperation', 'cocktail_name']
+        let formItems = ['name', 'image', 'ingredients', 'preparation', 'cocktail']
     
         let form = document.createElement('form')
         let h2 = document.createElement('h2')
@@ -102,10 +102,10 @@ function buildCategories(category){
         function handleSubmit(e, value){
             let cocktail_recipe = {
             name: e.target.name.value,
-            image_url: e.target.image_url.value,
+            image_url: e.target.image.value,
             ingredients: e.target.ingredients.value,
-            preperation: e.target.preperation.value,
-            cocktail_name: e.target.cocktail_name.value,
+            preperation: e.target.preparation.value,
+            cocktail_name: e.target.cocktail.value,
             category_id: value,
             likes: 0
             
