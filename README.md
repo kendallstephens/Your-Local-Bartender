@@ -1,11 +1,30 @@
-Your Local Bartender
-Welcome Your Local Bartender! Here you can view cocktail recipes and share your own! 
+# Your Local Bartender
 
-Technologies used:
-JavaScript
-Ruby 
-HTML
-CSS
+A cocktail recipe sharing app where users can add their favorite recipes, view and like other recipe's.
 
-Created By
-Kendall Stephens
+## Languages & Frameworks
+
+### Client
+* Javascript
+* HTML
+* CSS
+* Bootstrap
+
+
+### Server
+* Ruby ob Rails 
+
+### Setup
+
+After forking and cloning this repo, run the following commands in your terminal
+
+* cd app
+* bundle install
+* rails db:migrate
+* rails s
+
+Next, navigate to the JS folder and open the index.html file in your browser
+
+### License
+
+[MIT](https://choosealicense.com/licenses/mit/)
