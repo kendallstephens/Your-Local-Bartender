@@ -77,28 +77,33 @@ body {
  
 }
 
-.add{
+.add {
   color: white;
 
 }
 
-.Logo{
+.Logo {
   display: block;
     margin-left: auto;
     margin-right: auto 
 }
 
-form{
-  font-size: 21px;
+form {
+  font-size: 25px;
 }
   
  label {
    color: white;
    
  }
+
+ .like-button {
+   color: red
+ }
   
     @media only screen and (min-width: 850px) {
     main {
       grid-template-columns: 1fr 1fr 1fr;
+  
     }
   }

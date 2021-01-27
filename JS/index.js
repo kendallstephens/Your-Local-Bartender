@@ -82,6 +82,8 @@ function buildCategories(category){
         formItems.forEach(item => {
             let label = document.createElement('label')
             let input = document.createElement('input')
+            input.type = 'text'
+            input.name = item
             label.for = item
             label.textContent = item.toUpperCase()
             input.type = 'text'
